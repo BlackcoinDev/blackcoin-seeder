@@ -85,7 +85,7 @@ public:
         {"minheight", required_argument, 0, 'x'},
         {"testnet", no_argument, &fUseTestNet, 1},
         {"wipeban", no_argument, &fWipeBan, 1},
-        {"wipeignore", no_argument, &fWipeBan, 1},
+        {"wipeignore", no_argument, &fWipeIgnore, 1},
         {"help", no_argument, 0, 'h'},
         {0, 0, 0, 0}
       };
@@ -465,12 +465,14 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"electrum1.blackcoin.nl", "electrum2.blackcoin.nl", "electrum3.blackcoin.nl", "vps.blackcoin.nl", "dns.blackcoin.nl", "2mzhm7vwjwzhamc3g5fllu3peh3n3exo2pdbumksjzacu6fwmbixkhyd.onion", ""};
-static const string testnet_seeds[] = {"electrum1.blackcoin.nl",
-                                       "electrum2.blackcoin.nl",
-                                       "electrum3.blackcoin.nl",
-                                       "vps.blackcoin.nl",
-                                       ""};
+static const string mainnet_seeds[] = {"dnsseed.blackcoin.nl", "dnsseed2.blackcoin.nl", "electrum1.blackcoin.nl", "electrum2.blackcoin.nl", "blk1brasil.blackcoin.nl", "blk2brasil.blackcoin.nl", ""};
+static const string testnet_seeds[] = {"dnsseed.blackcoin.nl",
+                                        "dnsseed2.blackcoin.nl",
+                                        "electrum1.blackcoin.nl",
+                                        "electrum2.blackcoin.nl",
+                                        "blk1brasil.blackcoin.nl",
+                                        "blk2brasil.blackcoin.nl",
+                                        ""};
 static const string *seeds = mainnet_seeds;
 static vector<string> vSeeds;
 

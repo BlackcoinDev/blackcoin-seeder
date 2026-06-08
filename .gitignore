@@ -4,4 +4,8 @@ dnsseed*
 dnsstats.log
 .workspace
 AGENTS.md
+.omo/
+.clangd
+*.o.tmp
+
 
